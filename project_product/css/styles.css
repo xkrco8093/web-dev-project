@@ -220,7 +220,8 @@ strong {
 }
 
 small, .small {
-  font-size: 0.875em;
+  font-size: 1em;
+  color: #6610f2;
 }
 
 mark, .mark {
@@ -452,6 +453,78 @@ legend + * {
   direction: ltr;
 }
 */
+
+.search-box {
+  height: 30px;
+  width: 300px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #535353;
+}
+
+.search-txt {
+  border: none;
+  outline: none;
+  background: none;
+  float: left;
+  padding: 0px;
+  color: #c3c3c3;
+  font-size: 16px;
+  line-height: 10px;
+  width: 200px;
+}
+
+.search-btn {
+ float: right;
+ width: 40px;
+ height: 100%;
+ border: none;
+ font-size: 16px;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column; /* 수직 방향으로 배치 */
+  align-items: center; /* 버튼들을 가운데 정렬 */
+  margin: 10px;
+  width: 100%;
+}
+.btn-container a {
+  display: block; /* 블록 요소로 변환 */
+  margin-bottom: 20px;
+  padding: 10px 20px; /* 버튼 패딩 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  border-radius: 5px; /* 버튼 모서리 둥글게 */
+  width: 100%;
+}
+
+.btn-container a:last-child {
+  margin-bottom: 0;
+}
+
+#product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-item {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.description-label {
+  width: 100px; /* 적절한 너비로 조정 가능 */
+  font-weight: bold;
+}
+
+.description-value {
+  flex: 1;
+}
+
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -539,7 +612,9 @@ progress {
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
   line-height: 1.2;
+  margin: 20px 0 40px 0;
 }
+
 @media (min-width: 1200px) {
   .display-5 {
     font-size: 3rem;
