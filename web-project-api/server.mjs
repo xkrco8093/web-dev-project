@@ -5,7 +5,7 @@ const port = 3000;
 
 // 모듈
 import { products } from './products.mjs';
-import { productDetails } from './prod-detail.mjs';
+import { productDetails as details } from './prod-detail.mjs';
 
 // CORS 미들웨어 사용
 app.use(cors());
@@ -22,9 +22,9 @@ app.get('/api/products/:id', (req, res) => {
 });
 
 // 공연 상세 정보 반환
-app.get('/api/productDetails/:id', (req, res) => {
+app.get('/api/details/:id', (req, res) => {
   const productId = parseInt(req.params.id, 10);
-  const product = productDetails.find(p => p.id === productId);
+  const product = details.find(p => p.id === productId);
   if (product) {
     res.json(product);
   } else {
